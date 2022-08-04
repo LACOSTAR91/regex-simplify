@@ -1,0 +1,6 @@
+src/
+test/
+.gitignore
+tsconfig.json
+TODO.md
+TODOp.md
