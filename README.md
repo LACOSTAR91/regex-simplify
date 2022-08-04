@@ -3,9 +3,9 @@
 [![Download](https://img.shields.io/npm/dt/regex-simplify)](https://www.npmjs.com/package/regex-simplify)
 
 
-# NightAPI
+# Regex-simplify
 
-Ce paquet Npm est fourni pour faciliter l'utilisation du regex et pour donner des regex préfait afin que vous les utilisiez dans votre code.</br></br>
+Ce paquet Npm est fourni pour faciliter l'utilisation du regex et pour donner des regex préfait afin que vous les utiliser dans votre code.</br></br>
 <strong>Voici la documentation pour vous retrouver plus facilement [Regex-simplify module documentation](https://regex-simplify.lacostar.fr/)</strong>
 
 ## Installation
