@@ -1,0 +1,22 @@
+{
+  "name": "simply-regex",
+  "version": "1.0.0",
+  "description": "Un module pour vous simplifier la vie au lieu de faire du regex",
+  "main": "dist/regex.js",
+  "scripts": {
+    "simply-regex": "echo [Simply-regex] For use the module read the doc here: https://docs.night-api.com/",
+    "build": "tsc -p .",
+    "test": "node test"
+  },
+  "keywords": [
+    "regex",
+    "util",
+    "verification"
+  ],
+  "author": "LACOSTAR91",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "typescript": "^4.6.4"
+  }
+}
