@@ -1,12 +1,11 @@
 {
   "name": "regex-simplify",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Un module pour vous simplifier la vie au lieu de faire du regex",
   "main": "dist/regex.js",
   "scripts": {
     "build": "tsc -p .",
-    "test": "node test",
-    "publish": "npm run build && npm publish"
+    "test": "node test"
   },
   "keywords": [
     "regex",

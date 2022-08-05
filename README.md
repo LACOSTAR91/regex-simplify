@@ -38,4 +38,4 @@ const regex = require('regex-simplify');
 <strong>Pour voir les fonctionalités du module je vous invite à lire notre [documentation](https://regex-simplify.lacostar.fr/)</strong>
 
 Don't forgot to star the repository on Github:
-[![Star](https://img.shields.io/github/stars/lacostar/regex-simplify?color=brightgreen&logo=github&logoColor=white)](https://github.com/LACOSTAR91/regex-simplify)
+[![Star](https://img.shields.io/github/stars/LACOSTAR91/regex-simplify?color=brightgreen&logo=github&logoColor=white)](https://github.com/LACOSTAR91/regex-simplify)
