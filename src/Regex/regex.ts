@@ -3,9 +3,9 @@ const global = {
 
 };
 const discord = {
-    userMention: /<@!?(\d{17,19})>/g,
-    channelMention: /<#(\d{17,19})>/g,
-    roleMention: /<@&(\d{17,19})>/g,
+    userMention: /<@!?(?<id>\d{17,19})>/g,
+    channelMention: /<#(?<id>\d{17,19})>/g,
+    roleMention: /<@&(?<id>\d{17,19})>/g,
     emoji: /<(?<animated>a)?:(?<name>\w{2,32}):(?<id>\d{17,19})>/g,
     invite: /discord(?:(?:app)?\.com\/invite|\.gg(?:\/invite)?)\/(?<code>\w{2,255})/gi,
 };
@@ -15,7 +15,7 @@ const web = {
     // TODO Put a max length for username and password auth
     link: /^(?:(?<protocol>[a-zA-Z]{2,8}):(?:\/)(?:\/))?(?:(?<auth>(?<username>\S+):(?<password>\S+))@)?(?<alldomain>(?<subdomain>[a-z0-9]{1,30}\.){0,2}(?<domain>[a-z\-0-9]{1,256}){1}\.{1}(?<extension>[a-z]{1,10}){1}|(?<ipaddress>\b(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(?:\.(?:25[0-5]|2[0-4 ]\d|1\d\d|[1-9]?\d)){3}\b))(?:\:(?<port>[0-9]{1,10}))?(?<route>\/?(?:[a-z_0-9\-_]{1,20}){1,}\/){0,10}(?<filename>[a-z0-9\-_]{1,20}\.[a-z0-9]{2,6})?(?<query>\?{1}[a-z0-9%\+_\-&=\.@\!,\:]{0,200}){0,1}(?<anchor>\#{1}[a-z0-9%\+_\-&=\.@\!,\:]{0,200}){0,1}$/m,
     includeLink: /(?:(?<protocol>[a-zA-Z]{2,8}):(?:\/)(?:\/))?(?:(?<auth>(?<username>\S+):(?<password>\S+))@)?(?<alldomain>(?<subdomain>[a-z0-9]{1,30}\.){0,2}(?<domain>[a-z\-0-9]{1,256}){1}\.{1}(?<extension>[a-z]{1,10}){1}|(?<ipaddress>\b(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(?:\.(?:25[0-5]|2[0-4 ]\d|1\d\d|[1-9]?\d)){3}\b))(?:\:(?<port>[0-9]{1,10}))?(?<route>\/?(?:[a-z_0-9\-_]{1,20}){1,}\/){0,10}(?<filename>[a-z0-9\-_]{1,20}\.[a-z0-9]{2,6})?(?<query>\?{1}[a-z0-9%\+_\-&=\.@\!,\:]{0,200}){0,1}(?<anchor>\#{1}[a-z0-9%\+_\-&=\.@\!,\:]{0,200}){0,1}/igm,
-    email: /^(?<user>(?!\.)[\w\-_.]{1,64}[^.])@(?<domain>[\w\-.]{2,255}[^.\W])$/gm,
+    email: /(?<user>(?!\.)[\w\-_.]{1,64}[^.])@(?<domain>[\w\-.]{2,255}[^.\W])/gm,
 };
 const password = {
     lowPassword: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,

@@ -2,7 +2,7 @@ import { resolveRegex } from './index';
 import { discord } from './regex';
 
 export default class Discord {
-    resolveInviteCode(data: string) {
+    invite(data: string) {
         if (!data) throw new TypeError("[Regex-simplify] Missing data");
         if(typeof data !== 'string') throw new TypeError("[Regex-simplify] data param must be a string");
         return resolveRegex(data, discord.invite);
@@ -25,8 +25,9 @@ export default class Discord {
     emojiInfo(emoji: string) {
         if (!emoji) throw new TypeError("[Regex-simplify] Missing emoji");
         if(typeof emoji !== 'string') throw new TypeError("[Regex-simplify] emoji param must be a string");
-        if(!resolveRegex(emoji, discord.emoji)) throw new TypeError("[Regex-simplify] emoji param must be a valid emoji");
-        const emojiInfos = discord.emoji.exec(emoji)?.groups;
-        return { animated: Boolean(emojiInfos?.animated), name: emojiInfos?.name || null, id: emojiInfos?.id || null };
+        // if(!resolveRegex(emoji, discord.emoji)) throw new TypeError("[Regex-simplify] emoji param must be a valid emoji");
+        // const emojiInfos = discord.emoji.exec(emoji)?.groups;
+        // return { animated: Boolean(emojiInfos?.animated), name: emojiInfos?.name || null, id: emojiInfos?.id || null };
+        return resolveRegex(emoji, discord.emoji);
     };
 };
