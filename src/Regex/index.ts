@@ -1,11 +1,12 @@
-function resolveRegex(data: string, regex: RegExp): resolveRegex {   
+function resolveRegex(data: string, regex: RegExp) {   
     if (!data) throw new TypeError("[Regex-simplify] Missing data");
     if (!regex) throw new TypeError("[Regex-simplify] Missing regex");
     const numberOfMatch = data.match(regex)?.length ?? 0;
-    const groups = new Array();
+    let groups: any[] | null = new Array();
 
-    if(numberOfMatch > 1) data.match(regex)?.forEach((match) => groups.push(regex.exec(data)?.groups ?? null));
-    else groups.push(regex.exec(data)?.groups ?? null);
+    if(numberOfMatch > 1) data.match(regex)?.forEach((match) => groups?.push(regex.exec(data)?.groups ?? null));
+    else if(numberOfMatch === 1) groups.push(regex.exec(data)?.groups ?? null);
+    else groups = null;
 
     return {
         include: numberOfMatch > 0 ? true : false,
