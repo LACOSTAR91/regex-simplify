@@ -7,4 +7,22 @@ function unicodeEmoji(emoji: string) {
     return resolveRegex(emoji, global.unicodeEmoji)
 }
 
-export { unicodeEmoji };
+function rgb(color: string) {
+    if (!color) throw new TypeError("[Regex-simplify] Missing color");
+    if(typeof color !== 'string') throw new TypeError("[Regex-simplify] color param must be a string");
+    return resolveRegex(color, global.rgb)
+}
+
+function hsl(color: string) {
+    if (!color) throw new TypeError("[Regex-simplify] Missing color");
+    if(typeof color !== 'string') throw new TypeError("[Regex-simplify] color param must be a string");
+    return resolveRegex(color, global.hsl)
+}
+
+function hex(color: string) {
+    if (!color) throw new TypeError("[Regex-simplify] Missing color");
+    if(typeof color !== 'string') throw new TypeError("[Regex-simplify] color param must be a string");
+    return resolveRegex(color, global.hex)
+}
+
+export { unicodeEmoji, rgb, hsl, hex };

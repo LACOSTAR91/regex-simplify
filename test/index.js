@@ -1,10 +1,7 @@
 const { global, web, discord, password, regex } = require('../lib/regex');
 
-const invite = discord.invite(`
-    https://discord.gg/7prqAjux
-    https://discord.com/invite/7prqAjux
-    discord.gg/7prqAjux
-    https://discord.com/7prqAjux
-`);
+const color = global.hsl(`
+    hsl(123, 45%, 67%)
+`)
 
-console.log(invite);
+console.log(color);
