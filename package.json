@@ -1,6 +1,6 @@
 {
   "name": "regex-simplify",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Un module pour vous simplifier la vie au lieu de faire du regex",
   "main": "dist/regex.js",
   "scripts": {
